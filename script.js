@@ -20,12 +20,14 @@ const klikkausParannus = document.getElementById("klikkausParannus");
 const uuniParannus = document.getElementById("uuniParannus");
 const tehouuniParannus = document.getElementById("tehouuniParannus");
 const tehokkainklikkausParannus = document.getElementById("tehokkainklikkausParannus");
+const devLisaaKeksit = document.getElementById("devLisaaKeksit");
 
 function muotoileLuku(luku) {
     return luku.toLocaleString("fi-FI", {
         maximumFractionDigits: 2
     });
 }
+
 
 function laskeTuotanto() {
     return uunit * Math.pow(1.25, tehouunit);
@@ -215,5 +217,9 @@ setInterval(function() {
     paivitaPeli();
 
 }, 1000);
+devLisaaKeksit.addEventListener("click", function() {
+    keksit += 2000;
+    paivitaPeli();
+});
 
 paivitaPeli();

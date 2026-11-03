@@ -172,3 +172,65 @@ button:disabled {
         max-width: 330px;
     }
 }
+.dev-keksi {
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 190px;
+}
+
+.dev-teksti {
+    background-color: #fff8ed;
+    color: #493323;
+    border: 1px solid #795238;
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.dev-keksi-alue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.dev-nuoli {
+    color: #795238;
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.dev-keksi-nappi {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.dev-keksi-nappi img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.dev-keksi-nappi:hover img {
+    transform: scale(1.1);
+}
+.dev-nuoli:first-child {
+    transform: rotate(-45deg);
+}
+
+.dev-nuoli:last-child {
+    transform: rotate(45deg);
+}
