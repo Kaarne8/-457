@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5e6cf;
+    color: #493323;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #795238;
+    color: white;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.peli,
+.kauppa {
+    background-color: #fff8ed;
+    border: 2px solid #d6b995;
+    border-radius: 12px;
+    padding: 25px;
+    width: 330px;
+}
+
+#keksit {
+    font-size: 28px;
+    font-weight: bold;
+    color: #795238;
+}
+
+.selite {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #795238;
+}
+
+#keksiNappi {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+}
+
+#keksiNappi img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    transition: transform 0.12s;
+}
+
+#keksiNappi:hover img {
+    transform: scale(1.05);
+}
+
+#keksiNappi:active img {
+    transform: scale(0.95);
+}
+
+#keksiNappi.klikattu img {
+    transform: scale(0.9) rotate(-3deg);
+}
+
+.piste-teksti {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #795238;
+    font-size: 23px;
+    font-weight: bold;
+    animation: pisteet 0.8s forwards;
+    pointer-events: none;
+}
+
+@keyframes pisteet {
+    from {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50px);
+    }
+}
+
+.parannus {
+    background-color: #f1dfc5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.parannus h3 {
+    margin-top: 0;
+}
+
+.parannus.ostettu {
+    background-color: #e5efdc;
+}
+
+.osto-palaute {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: #426b3e;
+    font-size: 12px;
+    font-weight: bold;
+    animation: ostettu 0.9s forwards;
+    pointer-events: none;
+}
+
+@keyframes ostettu {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+button {
+    background-color: #795238;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background-color: #573a27;
+}
+
+button:disabled {
+    background-color: #b9a795;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .peli,
+    .kauppa {
+        width: 100%;
+        max-width: 330px;
+    }
+}

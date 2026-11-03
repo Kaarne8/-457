@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeksiClick</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>KeksiClick</h1>
+    </header>
+    <main>
+
+        <section class="peli">
+            <h2>Tuotanto</h2>
+            <p id="keksit">0 keksiä</p>
+            <p id="tuotanto">KPS: 0</p>
+            <p id="klikkausVoima">KPK: 1</p>
+
+            <p class="selite">
+                KPS = keksiä per sekunti<br>
+                KPK = keksiä per klikkaus
+            </p>
+
+            <button id="keksiNappi" type="button">
+                <img src="kuvat/keksi.png" alt="Klikkaa keksiä">
+            </button>
+
+        </section>
+
+        <section class="kauppa">
+
+            <h2>Parannukset</h2>
+
+            <div class="parannus">
+                <h3>Tehokkaampi klikkaus</h3>
+                <p>KPK + 1</p>
+                <p id="klikkausHinta">Hinta: 75 keksiä</p>
+                <p id="klikkausMaara">Ostettu: 0</p>
+                <button id="klikkausParannus" type="button">Osta</button>
+            </div>
+
+            <div class="parannus">
+                <h3>Uuni</h3>
+                <p>KPS + 1</p>
+                <p id="uuniHinta">Hinta: 200 keksiä</p>
+                <p id="uuniMaara">Ostettu: 0</p>
+                <button id="uuniParannus" type="button">Osta</button>
+            </div>
+
+            <div class="parannus">
+                <h3>Tehouuni</h3>
+                <p>KPS + 25%</p>
+                <p id="tehouuniHinta">Hinta: 600 keksiä</p>
+                <p id="tehouuniMaara">Ostettu: 0</p>
+                <p id="tehouuniVaatimus">Vaatii vähintään yhden tavallisen uunin.</p>
+                <button id="tehouuniParannus" type="button">Osta</button>
+            </div>
+
+            <div class="parannus">
+                <h3>Tehokkain klikkaus</h3>
+                <p>KPK + 50%</p>
+                <p id="tehokkainklikkausHinta">Hinta: 500 keksiä</p>
+                <p id="tehokkainklikkausMaara">Ostettu: 0</p>
+                <button id="tehokkainklikkausParannus" type="button">Osta</button>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
